@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var button: Button
+    //private lateinit var button: Button
     private lateinit var imageView: ImageView
     private val pickImage = 100
     private var imageUri: Uri? = null
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button = findViewById(R.id.button_Image_pick)
+       // button = findViewById(R.id.button_Image_pick)
         imageView = findViewById(R.id.imageView2)
 
 btnApply.setOnClickListener {
@@ -40,7 +40,7 @@ btnApply.setOnClickListener {
     }
 }
 
-         button.setOnClickListener {
+        button_Image_pick.setOnClickListener {
 
              val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
              startActivityForResult(gallery, pickImage)
