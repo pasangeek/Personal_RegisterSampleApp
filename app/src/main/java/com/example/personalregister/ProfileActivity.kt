@@ -13,9 +13,11 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
        val person=intent.getSerializableExtra("EXTRA_PERSON")as com.example.personalregister.Person
-
-        text_person_info.text =person.toString()
-
+text_person_name.text=person.name.toString()
+        text_person_email.text=person.email.toString()
+        text_person_age.text=person.age.toString()
+        text_person_phone.text=person.phone.toString()
+       
 
 
     }
