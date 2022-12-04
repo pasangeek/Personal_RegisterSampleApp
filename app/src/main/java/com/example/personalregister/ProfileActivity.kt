@@ -31,6 +31,11 @@ class ProfileActivity : AppCompatActivity() {
         textView = findViewById(id.text_person_phone)
         val textView: TextView = findViewById<TextView>(R.id.text_person_phone)
 
+        text_person_email.setOnClickListener {
+            composeEmail(arrayOf(person.email))
+        }
+
+
         text_person_phone.setOnClickListener {
 
             val intent = Intent(Intent.ACTION_DIAL).apply {
@@ -42,6 +47,23 @@ class ProfileActivity : AppCompatActivity() {
 
 
         }
+
+
+
+
+
+    }
+
+  fun composeEmail(arrayOf: Array<String>) {
+      val intent = Intent(Intent.ACTION_SENDTO).apply {
+
+          data = Uri.parse("mailto:")
+          putExtra(Intent.EXTRA_EMAIL,arrayOf)
+          //putExtra(Intent.EXTRA_SUBJECT, subject)
+      }
+      if (intent.resolveActivity(packageManager) != null) {
+          startActivity(intent)
+      }
     }
 
 
