@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PERSONAL REGISTER</string>
+    <string name="phoneNumber">phone</string>
 </resources>
