@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       // button = findViewById(R.id.button_Image_pick)
-        imageView = findViewById(R.id.imageView2)
+      // button = findViewById(R.id.button_Image_pick)
+      imageView = findViewById(R.id.imageView2)
 
 btnApply.setOnClickListener {
     val name = etName.text.toString()

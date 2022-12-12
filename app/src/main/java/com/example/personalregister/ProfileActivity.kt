@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
         textView = findViewById(id.text_person_phone)
-        val textView: TextView = findViewById<TextView>(R.id.text_person_phone)
+        //val textView: TextView = findViewById<TextView>(R.id.text_person_phone)
 
         text_person_email.setOnClickListener {
             composeEmail(arrayOf(person.email))
