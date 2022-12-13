@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.personalregister.R.id
@@ -26,7 +27,7 @@ class ProfileActivity : AppCompatActivity() {
         text_person_email.text = person.email.toString()
         text_person_age.text = person.age.toString()
         text_person_phone.text = person.phone.toString()
-
+        imageView.setImageURI(Uri.parse(person.profilePictureUri))
 
         textView = findViewById(id.text_person_phone)
         //val textView: TextView = findViewById<TextView>(R.id.text_person_phone)

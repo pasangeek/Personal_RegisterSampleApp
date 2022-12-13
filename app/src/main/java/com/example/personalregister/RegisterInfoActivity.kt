@@ -31,7 +31,10 @@ btnApply.setOnClickListener {
     val email = etEmailAddress.text.toString()
     val age = editTextAge.text.toString().toInt()
     val phone= Ephone.text.toString().toInt()
-    val person=Person(name,email,age,phone)
+val profilePictureUri =imageUri.toString()
+
+    val person=Person(name,email,age,phone,profilePictureUri )
+
     Intent(this,ProfileActivity::class.java).also {
        it.putExtra("EXTRA_PERSON",person)
 
@@ -54,6 +57,7 @@ btnApply.setOnClickListener {
          if (resultCode == RESULT_OK && requestCode == pickImage) {
              imageUri = data?.data
              imageView.setImageURI(imageUri)
+
          }
 
     }

@@ -8,5 +8,6 @@ data class Person(
     val email:String,
     val age: Int,
     val phone:Int,
+    val profilePictureUri: String ,
 
 ):java.io.Serializable
